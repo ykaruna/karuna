@@ -1,0 +1,73 @@
+ 1.)Begin
+	Prompt “Enter age:” and store in age
+	If(age>=18) then
+		Display “Eligible to vote”
+	Else
+		Display “Not Elegible to vote”
+End
+2.)BEGIN
+	DECLARE pr as INTEGER
+	DECLARE rate as INTEGER 
+	DECLARE time as INTEGER
+	DECLARE si as FLOAT
+	INITIALIZE pr to 50000
+INITIALIZE rate to 2
+INITIALIZE pr to 10
+	Si=(pr*time*rate)/100
+	PRINT “Simple Interest is:” si 
+END
+3.) BEGIN
+	PROMPT “Enter a number” and store in num
+	IF((num%2==0)&&(num%3==0)&&(num%5==0))
+		PRINT “The number is divisible by 2,3 and 5”
+	ELSE
+		PRINT “Not divisible by 2,3 and 5”
+END
+4.) BEGIN 
+	DECLARE n as INTEGER
+	INITIALIZE n to 1
+	WHILE(n<=5)
+		PRINT n MOVE TO NEXT LINE
+		n=n+1
+	END WHILE
+END
+5.) BEGIN 
+	DECLARE n as INTEGER
+	FOR n=1 TO 10
+	IF(n%2==0)
+		DISPLAY n “is an Even number”
+	ELSE
+		DISPLAY n “is an odd number”
+	ENDIF
+	END FOR
+END
+6.)BEGIN
+	DECLARE numbers[5] AS INTEGER ARRAY
+	DECLARE max as INTEGER
+	INITIALIZE max TO 0
+	FOR index=0 To 4
+		ACCEPT numbers[index]
+	END FOR
+	max=numbers[0]
+	FOR index=0 TO 4
+		If(numbers[index]>max) THEN
+			Max=numbers[index]
+		END IF
+	END FOR
+	PRINT max
+END
+7.)BEGIN
+	DECLARE numbers[4] AS INTEGER ARRAY
+	FOR index=0 To 4
+		ACCEPT numbers[index]
+	END FOR
+	FOR index=0 TO 4
+		IF((numbers[index]%1==0)&&(numbers[index]%numbers[index]==0)) THEN
+			DISPLAY numbers[index] “is a prime number”
+		END IF
+	END FOR
+END
+
+
+
+
