@@ -1,0 +1,32 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        
+    </body>
+</html>
+<script>
+    var n = 5;
+    var printStar= "";
+    for(var counter = 0; counter < n; counter++) {
+        {
+            for(var index = 0; index < n; index++)
+            {
+            if(counter == 0 || counter == n - 1) {
+                printStar+= "*";
+            }
+            else {
+                if (index === 0 || index === n - 1) {
+                    printStar += "*";
+                }
+                else {
+                    printStar += " ";
+                }
+            }
+            }
+        }
+        printStar=printStar+"\n";
+    }
+    console.log(printStar);
+</script>

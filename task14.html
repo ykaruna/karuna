@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>karuna reddy >> Learn complete javascript</title>
+        <style type="text/css">
+        </style>
+        <script>
+            function validate() {
+                var name = document.stud_form.name;
+                var email = document.stud_form.email;
+                var mobile = document.stud_form.mobile;
+                var gender = document.stud_form.gender;
+                var course = document.stud_form.course;
+                var batch = document.stud_form.batch;
+                if(name.value.length <= 0) {
+                    alert("Name is required");
+                    name.focus();
+                    return false;
+                    console.log(name = document.stud_form.name);
+                }
+                if(mobile.value.length <= 0) {
+                    alert("mobile is required");
+                    mobile.focus();
+                    return false;
+                }
+                if(email.value.length <= 0) {
+                    alert("email is required");
+                    email.focus();
+                    return false;
+                }
+                if(gender.value.length <= 0) {
+                    alert("gender is required");
+                    gender.focus();
+                    return false;
+                }
+                if(course.value.length <= 0) {
+                    alert("course is required");
+                    course.focus();
+                    return false;
+                }
+                if(batch.value.length <= 0) {
+                    alert("batch is required");
+                    batch.focus();
+                    return false;
+            }
+            var check = false;
+            for (var i = batch.length - 1; i >= 0; i--) {
+                if(batch[i].checked) {
+                    check = true;
+                }
+            }
+            if(check == false) {
+                alert("Batch is required");
+                return false;
+            }
+            return false;
+        </script>
+    </head>
+    <body>
+        <center><h1>Learn Complete JavaScript: Form Validation</h1></center>
+        <hr>
+        <form method="" action="" name="stud_form" onsubmit="return"></form>
+        </body>
+</html>

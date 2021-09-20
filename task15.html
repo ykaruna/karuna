@@ -1,0 +1,49 @@
+<html>
+ 
+<head>
+<style>
+#txtMobileNumber,
+#txtName {​​​​​​
+width: 18%;
+        }​​​​​​
+.danger{​​​​​​
+color: red;
+        }​​​​​​
+</style>
+</head>
+ 
+<body>
+<form>
+<label>Name</label>
+<br>
+<inputtype="text"id="txtName"placeholder="Please enter your Name"required/>
+<labelid="lblNameErrorMsg"class="danger"></label>
+<br><br>
+<label>Mobile Number</label>
+<br>
+<inputtype="number"id="txtMobileNumber"placeholder="Please enter your Mobile Number"required/>
+<labelid="lblNumberErrorMsg"class="danger"></label>
+<br><br>
+<inputtype="button"value="Register"onclick="Validate()"/>
+<inputtype="reset"/>
+<br><br><br><br>
+<labelid="lblMessage"></label>
+</form>
+</body>
+ 
+</html>
+<script>
+functionValidate() {​​​​​​
+vartxtName = document.getElementById('txtName').value;
+vartxtMobileNumber = Number(document.getElementById('txtMobileNumber').value);
+if(txtName==''){​​​​​​
+document.getElementById('lblNameErrorMsg').innerHTML="Please enter your Name";
+        }​​​​​​
+if(txtMobileNumber==''){​​​​​​
+document.getElementById('lblNumberErrorMsg').innerHTML="Please enter your Mobile Number";
+        }​​​​​​
+
+
+ 
+    }​​​​​​
+</script>
