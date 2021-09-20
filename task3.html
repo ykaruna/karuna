@@ -1,12 +1,74 @@
-<><html>
-  <head>
+create table sample(Id int,text varchar(200));
+insert into sample(Id,text) values(1,'Pritha 1');
+insert into sample(Id,text) values(2,'Pritha 2');
+insert into sample(Id,text) values(3,'Pritha 3');
+insert into sample(Id,text) values(4,'Pritha 4');
+insert into sample(Id,text) values(5,'Pritha 5');
+insert into sample(Id,text) values(6,'Pritha 6');
 
-  </head>
-  <body>
+select * from sample;
+select ID,TEXT from sample where id=4;
+select Text from sample where id=4;
+select Text As Name from sample where Text='Pritha 2';
 
-  </body>
-</html><script>
-    console.log("Hello i am first javascript program");
-    alert("Hi");
-    alert("Hi karuna reddy");
-  </script></>
+create table employeesalary(ID int,EmployeeName Varchar(200), Empsalary int);
+insert into employeesalary(Id,EmployeeName,Empsalary) values(1,'Employee 1',50000);
+insert into employeesalary(Id,EmployeeName,Empsalary) values(2,'Employee 2',1000);
+insert into employeesalary(Id,EmployeeName,Empsalary) values(3,'Employee 3',5000);
+insert into employeesalary(Id,EmployeeName,Empsalary) values(4,'Employee 4',10000);
+insert into employeesalary(Id,EmployeeName,Empsalary) values(5,'Employee 5',50000);
+
+select * from employeesalary;
+select * from employeesalary where Empsalary Between 1000 and 10000;
+select * from employeesalary where ID in(1,2,3);
+select * from employeesalary where ID not in(1,2,3);
+select * from employeesalary where EmployeeName LIKE '%Emp%';
+select * from sample where Text LIKE 'sa%';
+
+select ENPLOYEENAME || '--------' || EMPSalary As EmployeeANDSalary from employeesalary;
+select * from employeesalary where EMPSALARY <50000 and EMPSALARY>10000
+
+select * from employeesalary where EmployeeName is NULL;
+select * from sample;
+select DISTINCT Text from sample;
+select * from sample order by ID desc;
+select count(*) from sample;
+select count(*) from employeesalary;
+select SUM(EMPSalary) from employeesalary;
+select AVG(EMPSalary) from employeesalary;
+select MIN(EMPSalary) from employeesalary;
+select MAX(EMPSalary) from employeesalary;
+
+select TEXT from sample group by TEXT;
+select TEXT from sample group by TEXT having count(TEXT) >1;
+
+
+create Table SingleFunction(ID int, decimal, DecValue, INTvalue int);
+
+insert into SingleFunction(ID,DecValue,INTvalue) values(1,1.2234554,123);
+select * from SingleFunction;
+select TRUNC(DecValue,0) from SingleFunction;
+select DecValue from SingleFunction;
+select CEIL(32.65) from dual;
+select CEIL(32.1) from dual;
+select CEIL(-32.65) from dual;
+
+select Upper('SAMPLE') from dual;
+select INITCAP('hello i am here') from dual;
+select concat('hello i am here ',' to work on oracle') from dual;
+select SUBSTR('hello i am here to work on oracle',19,15) from dual;
+
+select CURRENT_DATE from dual;
+select CURRENT_TIMESTAMP from dual;
+select ADD_MONTHS(CURRENT_DATE,1) from dual;
+select MONTHS_BETWEEN('20-DEC-21','20-OCT-21') from dual;
+select TO_CHAR(sysdate, 'DD month, YYYY') from dual;
+select sysdate from dual;
+
+select case when (MOD(4,2)==0) then 'even' else 'odd' from dual;
+
+
+
+
+
+
