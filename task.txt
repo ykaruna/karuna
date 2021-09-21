@@ -1,0 +1,93 @@
+create table employee(id int, empname varchar(200));
+create table department(id int, deptname varchar(200));
+
+create table employeedepartmentMapping(id int,employeeid int,departmentid int);
+
+insert into employee(id ,empname) values(1,'karuna reddy1');
+insert into employee(id ,empname) values(2,'karuna reddy2');
+insert into employee(id ,empname) values(3,'karuna reddy3');
+insert into employee(id ,empname) values(4,'karuna reddy4');
+insert into employee(id ,empname) values(5,'karuna reddy5');
+
+insert into department(id ,deptname) values(1,'IT');
+insert into department(id ,deptname) values(2,'HR');
+insert into department(id ,deptname) values(3,'BU');
+insert into department(id ,deptname) values(4,'IT1');
+insert into department(id ,deptname) values(5,'HR1');
+
+select * from employee;
+select * from department;
+select * from employeedepartmentmapping;
+
+--Cartesian Product
+select empname,deptname from employee,department;
+
+--Equi Join
+select empname,departmentid from employee,employeedepartmentMapping where employee.id =employeedepartmentMapping.employeeid;
+
+--Non-Equi Join
+select empname,departmentid from employee,employeedepartmentMapping where employee.id between 1 and 2;
+
+--Outer Join
+select empname,departmentid from employee,employeedepartmentMapping where employee.id(+)=employeedepartmentMapping.employeeid;
+
+--USING Clause
+
+create table studentmaster(studentid int,studentname varchar(200));
+create table departmentmaster(departmentcode int,ddepartmentname varchar(200),studentid int);
+
+insert into studentmaster(studentid,studentname) values(1,'karuna'');
+insert into studentmaster(studentid,studentname) values(2,'Subhrajyot);
+insert into studentmaster(studentid,studentname) values(3,'sowmya);
+insert into studentmaster(studentid,studentname) values(4,'pritha');
+
+insert into departmentmaster(departmentcode,ddepartmentname,studentid) values(100,'IT',1);
+insert into departmentmaster(departmentcode,ddepartmentname,studentid) values(200,'HR',2);
+insert into departmentmaster(departmentcode,ddepartmentname,studentid) values(300,'BU',3);
+insert into departmentmaster(departmentcode,ddepartmentname,studentid) values(400,'CFMG',4);
+
+select * from studentmaster;
+select * from departmentmaster;
+
+select studentname,ddepartmentname,departmentcode from studentmaster join departmentmaster using(studentid);
+
+--EXISTS
+select DEPARTMENT_ID,DEPARTMENT_NAME from  HR.DEPARTMENTS DEPT
+ where EXISTS (select DEPARTMENT_ID from  HR.EMPLOYEES EMP where EMP.DEPARTMENT_ID=DEPT.DEPARTMENT_ID )
+
+create table sample(ID int NOT NULL,Text Varchar2(200) NOT NULL,CreatedOn Date default sysdate);
+
+ 
+
+select * from sampletable
+insert into sample(ID,TEXT) values(1,'Vikash');
+insert into sample(ID) values(2);
+
+--UNIQUE KEY
+create table sampletable(ID int NOT NULL,Text Varchar2(200),SampleValue Number(4,2),CreatedOn Date default sysdate,CONSTRAINT ID_UK UNIQUE(ID) );
+insert into sampletable(ID,TEXT) values(1,'Vikash');
+
+--PRIMARY KEY
+create table sampletablex(ID int CONSTRAINT ID_PK PRIMARY KEY,Text Varchar2(200) );
+
+ 
+--PRIMARY KEY WITH CONSTRAINT
+create table sampletablexy(ID int,Text Varchar2(200),SampleValue Number(4,2) CONSTRAINT SampleValue_MIN CHECK(SampleValue>100) );
+insert into sampletablexy(ID,SampleValue) values(1,100.00);
+
+ 
+--ALTER TABLE
+alter table sampletablexy add(xvalue int);
+select * from sampletablexy;
+alter table sampletablexy Modify(SampleValue int);
+select * from sampletablexy
+alter table sampletablexy  drop COLUMN XVALUE;
+
+ 
+--DROP,RENAME,TRUNCATE
+drop table sampletablexy
+RENAME sampletable to sampletablexy
+truncate table sampletablexy
+
+
+
