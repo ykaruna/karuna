@@ -1,15 +1,15 @@
 create table sample(Id int,text varchar(200));
-insert into sample(Id,text) values(1,'Pritha 1');
-insert into sample(Id,text) values(2,'Pritha 2');
-insert into sample(Id,text) values(3,'Pritha 3');
-insert into sample(Id,text) values(4,'Pritha 4');
-insert into sample(Id,text) values(5,'Pritha 5');
-insert into sample(Id,text) values(6,'Pritha 6');
+insert into sample(Id,text) values(1,'karuna 1');
+insert into sample(Id,text) values(2,'karuna 2');
+insert into sample(Id,text) values(3,'karuna 3');
+insert into sample(Id,text) values(4,'karuna 4');
+insert into sample(Id,text) values(5,'karuna 5');
+insert into sample(Id,text) values(6,'karuna 6');
 
 select * from sample;
 select ID,TEXT from sample where id=4;
 select Text from sample where id=4;
-select Text As Name from sample where Text='Pritha 2';
+select Text As Name from sample where Text='karuna 2';
 
 create table employeesalary(ID int,EmployeeName Varchar(200), Empsalary int);
 insert into employeesalary(Id,EmployeeName,Empsalary) values(1,'Employee 1',50000);
