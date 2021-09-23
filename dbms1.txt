@@ -1,0 +1,16 @@
+create table noble (year int,subject varchar(200),winner varchar(200),country varchar(200),category varchar(200));
+
+
+insert into noble (salesman id, name, city, commision  ) values (1, 'Hannes Alfaven', 'Sweden', 'Scientist');
+insert into noble (salesman id, name, city, commision  ) values (2, 'Louis Neel', 'France', 'Scientist');
+insert into noble (salesman id, name, city, commision  ) values (3, 'Luis Federico Leloir', 'France', 'Scientist');
+insert into noble (salesman id, name, city, commision  ) values (4, 'Ulf von Euler', 'Sweden', 'Scientist');
+insert into noble (salesman id, name, city, commision  ) values (5, 'Bernard Katz', 'Germany', 'Scientist');
+insert into noble (salesman id, name, city, commision  ) values (6, 'Aleksandr Solzheintsyn', 'Russia', 'Linguist');
+insert into noble (salesman id, name, city, commision  ) values (7, 'Paul Samuelson', 'USA', 'Economist');
+insert into noble (salesman id, name, city, commision  ) values (8, 'Julius Axelrod', 'USA', 'Scientist');
+insert into noble salesman id, name, city, commision  ) values (9, 'Dennis Gabor', 'Hungary', 'Scientist');
+
+
+select * from a3;
+select * from a3 where a3.subject='Chemistry' and a3.year = 'Paris';

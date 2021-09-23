@@ -1,0 +1,16 @@
+create table noble (year int,subject varchar(200),winner varchar(200),country varchar(200),category varchar(200));
+
+
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Physics', 'Hannes Alfaven', 'Sweden', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Physics', 'Louis Neel', 'France', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Chemistry', 'Luis Federico Leloir', 'France', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Physiology', 'Ulf von Euler', 'Sweden', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Physiology', 'Bernard Katz', 'Germany', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Literature', 'Aleksandr Solzheintsyn', 'Russia', 'Linguist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Economics', 'Paul Samuelson', 'USA', 'Economist');
+insert into noble (year ,subject ,winner , country,category  ) values (1970,'Physiology', 'Julius Axelrod', 'USA', 'Scientist');
+insert into noble (year ,subject ,winner , country,category  ) values (1971,'Physics', 'Dennis Gabor', 'Hungary', 'Scientist');
+
+
+select * from a3;
+select * from a3 where a3.subject='Chemistry' and a3.year =1970;
